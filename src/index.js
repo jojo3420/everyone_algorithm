@@ -21,7 +21,6 @@ function calcSum(n) {
 // 방법2 - 성능 이슈 있음.
 function calcSum2(n) {
   console.time('case2');
-
   let result  = 0;
   for (let i = 1; i <= n; i++) {
     result+= i;
@@ -30,6 +29,11 @@ function calcSum2(n) {
 
   return result;
 }
+// 가우스 공식
+function calcSum3(n) {
+  return n * (n + 1) / 2;
+};
+
 
 
 console.log(calcSum(10));
@@ -41,3 +45,7 @@ console.log(calcSum2(10));
 console.log(calcSum2(100));
 console.log(calcSum2(1000));
 console.log(calcSum2(1000000));
+console.log('-------------------------------------------')
+console.log(calcSum3(10))
+console.log(calcSum3(100))
+console.log(calcSum3(1000))
