@@ -110,3 +110,20 @@ function nFibonacci(n, list=[1, 1]) {
 console.log(nFibonacci(5) === 5);
 console.log(nFibonacci(8) === 21);
 console.log(nFibonacci(9) === 34);
+
+
+function fibo(n) {
+  /**
+   * book solution
+   * 1, 1, 2, 3, 5, 8, 13, 21, 34 ....
+   */
+  if (n <= 1) return n;
+  return fibo(n-1) + fibo(n-2);
+}
+
+console.log(fibo(7) === 13);
+console.log(fibo(1) === 1);
+console.log(fibo(2) === 1);
+console.log(fibo(3) === 2);
+console.log(fibo(4) === 3);
+console.log(fibo(9) === 34);
