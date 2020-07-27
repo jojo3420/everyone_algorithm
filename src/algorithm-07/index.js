@@ -16,6 +16,8 @@ function findIndex(list, x) {
 console.log(findIndex([2, 5, 1, 2], 5) === 1)
 console.log(findIndex([2, 5, 1, 2], 1) === 2);
 console.log(findIndex([29, 51, 19, 20, 1], 20) === 3);
+console.log([1, 2, 9, 4, 2, 1].findIndex(n => n === 9) === 2)
+
 
 
 /**
@@ -104,3 +106,5 @@ const list1 = [111, 222, 333, 444];
 const list2 = ['aaa', 'bbb', 'ccc', 'ddd'];
 console.log(getNameById(list1, list2, 333) === 'ccc');
 console.log(getNameById(list1, list2, 555) === -1);
+
+
