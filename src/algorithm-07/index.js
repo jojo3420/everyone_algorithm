@@ -39,6 +39,16 @@ console.log(findIndexBy([1, 4, 2, 9, 1], 1)); // [0, 4]
 console.log(findIndexBy([1, 4, 2, 9, 0], 9)); // [3]
 
 
+function findByIndexBy2(list, x, index) {
+  // console.log({ list, x, index});
+  if (list[index] && list[index] === x) return index;
+  return findByIndexBy2(list, x, isNaN(index) ? 0 : index+1);
+}
+
+console.log('findByIndexBy2: ', findByIndexBy2([5, 1, 2, 45, 9, 21, 4], 45) === 3);
+console.log('findByIndexBy2: ', findByIndexBy2([5, 1, 2, 45, 9, 21, 4], 21) === 5);
+console.log('findByIndexBy2: ', findByIndexBy2([5, 1, 2, 45, 9, 21, 4], 5) === 0);
+
 /**
  순차 정렬 기법으로 배열을 정렬한다.
  Order by ASC

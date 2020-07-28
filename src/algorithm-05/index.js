@@ -1,11 +1,9 @@
-
-
 function gcd1(num1, num2) {
   /*
   * 두 수의 최대 공약수 구하기
   * */
   let r;
-  let min =  num1;
+  let min = num1;
   if (min > num2) min = num2;
   for (let i = 1; i <= min; i++) {
     if (num1 % i === 0 && num2 % i === 0) {
@@ -26,7 +24,7 @@ function gcd2(num1, num2) {
   let min = num1;
   if (min > num2) min = num2;
 
-  while(true) {
+  while (min > 0) {
     if (num1 % min === 0 && num2 % min === 0) {
       return min;
     }
@@ -38,8 +36,6 @@ function gcd2(num1, num2) {
 console.log(gcd2(10, 20));
 console.log(gcd2(2, 7));
 console.log(gcd2(21, 14));
-
-
 
 
 function gcd3(num1, num2) {
@@ -70,21 +66,19 @@ console.log(gcd3(2, 7));
 console.log(gcd3(21, 14));
 
 
-
-
 // n번째 fibonacci 수 구하기
 //  1, 1, 2, 3, 5, 8, 13, 21, 34, ...
 function fibonacci(n) {
   const list = [];
   let prev = 0, next = 1;
-  while(n >= 1) {
+  while (n >= 1) {
     const value = next;
     next += prev;
     prev = value;
     list.push(value);
     n = n - 1;
   }
-  return list[list.length-1];
+  return list[list.length - 1];
 }
 
 console.log(fibonacci(6) === 8);
@@ -96,13 +90,11 @@ console.log(fibonacci(6) === 8);
 // 7 번째 파보나치 수는 = 13이고
 // 13은 5 + 8 의 합이다.
 
-function nFibonacci(n, list=[1, 1]) {
+function nFibonacci(n, list = [1, 1]) {
   // 종료 조건
-  if (list.length === n) return list[n-1];
-
+  if (list.length === n) return list[n - 1];
   // next 피보나치 구하기
-  list.push(list[list.length -2] + list[list.length -1]);
-
+  list.push(list[list.length - 2] + list[list.length - 1]);
   return nFibonacci(n, list);
 }
 
@@ -118,7 +110,7 @@ function fibo(n) {
    * 1, 1, 2, 3, 5, 8, 13, 21, 34 ....
    */
   if (n <= 1) return n;
-  return fibo(n-1) + fibo(n-2);
+  return fibo(n - 1) + fibo(n - 2);
 }
 
 console.log(fibo(7) === 13);
